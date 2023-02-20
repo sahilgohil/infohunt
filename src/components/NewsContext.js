@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 const NewsContext = React.createContext()
 
@@ -36,12 +37,12 @@ function NewsContextProvider(props)
     
         fetch(`https://newsapi.org/v2/everything?q=${topic}&pageSize=${pageSize}`, options)
             .then(response => response.json())
-            .then(data => setNewsArray(data.articles))
+            .then(data => setNewsArray(data.articles.map(x=> 
+                ({id:uuidv4(),...x}))))
 
     },[topic,pageSize])
     
-
-     
+     console.log(newsArray)
         
     return(
         <NewsContext.Provider value={{newsArray,getNewSearchItem,viewMoreResults}}>

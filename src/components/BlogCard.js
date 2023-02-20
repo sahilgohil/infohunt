@@ -18,7 +18,7 @@ function BlogCard(props)
         <img className="main-image" src={props.post.urlToImage
 } alt="blog1" />
         <p className="main-date">{date}</p>
-        <Link  className='title-link' ><h2 className="main-heading">{props.post.title}</h2></Link>
+        <Link to={props.post.id} className='title-link' ><h2 className="main-heading">{props.post.title}</h2></Link>
         <p className="main-body">{props.post.content}</p>
         
         </section>

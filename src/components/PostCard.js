@@ -1,5 +1,4 @@
 
-import blogData from './blogData'
 import BlogCard from './BlogCard'
 import React from "react"
 import { NewsContext } from './NewsContext'
@@ -11,9 +10,9 @@ function PostCard()
     const {newsArray,viewMoreResults} = React.useContext(NewsContext)
     
     const newsElements  = newsArray.map(({urlToImage
-        ,title,publishedAt,content})=>{
+        ,title,publishedAt,content,id})=>{
         return (<BlogCard post={{urlToImage
-            ,title,publishedAt,content}} />)
+            ,title,publishedAt,content,id}} />)
     })
     
 

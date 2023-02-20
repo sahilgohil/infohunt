@@ -83,7 +83,7 @@ li{
   border: 1px solid #ffc300;
  
 }
-.search-btn:hover{
+.search-btn:hover,.external-link:hover{
   
   background-color: #ffc300;
   color: white;
@@ -500,4 +500,13 @@ li{
 .go-top:hover{
   background-color: #edede9;
   cursor: pointer;
+}
+.external-link{
+  font-weight: 600;
+  color: #003566;
+  background-color: #ffc300;
+  text-decoration: none;
+  padding: 6px 16px;
+  border-radius: 8px;
+  display: inline-block;
 }
