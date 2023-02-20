@@ -1,6 +1,5 @@
 import Navbar from "./Navbar"
 import { useParams } from "react-router-dom"
-import blogData from "./blogData"
 import Footer from "./Footer"
 import { NewsContext } from "./NewsContext"
 import { useContext } from "react"
