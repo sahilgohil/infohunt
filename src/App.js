@@ -1,8 +1,8 @@
-import Header from "./Header";
-import PostCard from "./PostCard";
+
 import { Routes,Route,Link } from "react-router-dom";
 import Home from "./Home";
-import PostPage from './PostPage'
+import PostPage from './components/PostPage'
+import About from "./components/About";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path=':id' element ={<PostPage />}/>
+        <Route path="about" element={<About/>} />
       </Routes>
     </div>
   );

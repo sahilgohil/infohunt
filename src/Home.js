@@ -1,6 +1,7 @@
 import { Link, Route, Routes } from "react-router-dom";
-import Header from "./Header";
-import PostCard from "./PostCard";
+import Header from "./components/Header";
+import PostCard from "./components/PostCard";
+import Footer from "./components/Footer";
 
 function Home()
 {
@@ -8,6 +9,7 @@ function Home()
         <div>
             <Header />
             <PostCard />
+            <Footer />
         </div>
     )
 }
