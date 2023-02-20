@@ -8,6 +8,7 @@ function NewsContextProvider(props)
 {   
     const [newsArray,setNewsArray] = React.useState([])
     const [topic, setTopic] = React.useState('microsoft')
+    const [pageSize,setPageSize] = React.useState(9)
     function getNewSearchItem(searchedItem)
     {
         if(searchedItem)
@@ -19,6 +20,10 @@ function NewsContextProvider(props)
         }
         
     }
+    function viewMoreResults()
+    {
+        setPageSize(pre => pre+6)
+    }
 
     useEffect(()=>{
         
@@ -29,17 +34,17 @@ function NewsContextProvider(props)
             }
         };
     
-        fetch(`https://newsapi.org/v2/everything?q=${topic}&pageSize=10`, options)
+        fetch(`https://newsapi.org/v2/everything?q=${topic}&pageSize=${pageSize}`, options)
             .then(response => response.json())
             .then(data => setNewsArray(data.articles))
 
-    },[topic])
+    },[topic,pageSize])
     
 
      
         
     return(
-        <NewsContext.Provider value={{newsArray,getNewSearchItem}}>
+        <NewsContext.Provider value={{newsArray,getNewSearchItem,viewMoreResults}}>
             {props.children}
         </NewsContext.Provider>
     )

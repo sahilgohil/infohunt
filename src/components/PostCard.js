@@ -6,24 +6,9 @@ import { NewsContext } from './NewsContext'
 
 function PostCard()
 {
-    const [counter,setCounter] = React.useState(3)
-    const [isMorePosts,setIsMorePosts] = React.useState(true)
-    let blogs = blogData.slice(0,counter) 
-  
-    // const blogElements = blogs.map(post => {
-    //     return (<BlogCard key={post.id} post = {post}/>)
-    // })
-    React.useEffect (()=>{
-        if(blogData.length<=counter)
-        {
-            setIsMorePosts(false)
-        }
-    },[counter])
-    function increaseCounter()
-    {
-        setCounter(preCounter => preCounter+3)
-    }
-    const {newsArray} = React.useContext(NewsContext)
+
+
+    const {newsArray,viewMoreResults} = React.useContext(NewsContext)
     
     const newsElements  = newsArray.map(({urlToImage
         ,title,publishedAt,content})=>{
@@ -36,13 +21,12 @@ function PostCard()
         <div >
             
             <main className="main-container" >
-                {/* {blogElements}
-                 */}
+  
                  {newsElements}
             </main>
-            {isMorePosts ?
-            <div className="view-more-container"><button onClick={increaseCounter} className="view-more-link">View More</button></div> :
-            <h2 className='nomore'>No more posts</h2>}
+           
+            <div className="view-more-container"><button onClick={viewMoreResults} className="view-more-link">View More</button></div> 
+            
         </div>
     )
 }
