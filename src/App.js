@@ -11,15 +11,20 @@ function App() {
 
   const location = useLocation()
   useEffect(()=>{
-    window.scrollTo(0,0)
+    goTop()
   },[location])
   //newsapi.org
 // api key= 7b5391f0b30c443786924b2a5038dff6
 
+  function goTop()
+  {
+    window.scrollTo(10,10)
+  }
 
 
   return (
     <div className="App" >
+      <div className="go-top" onClick={goTop}><i class="fa-solid fa-arrow-up fa-xl"></i></div>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path=':id' element ={<PostPage />}/>

@@ -490,4 +490,14 @@ li{
   width: 0;
   height: 3px;
 }
-
+.go-top{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 1em;
+  border-radius: 50%;
+}
+.go-top:hover{
+  background-color: #edede9;
+  cursor: pointer;
+}
