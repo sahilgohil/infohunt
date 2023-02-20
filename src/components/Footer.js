@@ -1,9 +1,9 @@
 function Footer()
 {
     return(
-        <footer class="footer-container">
-            <h3 class="footer-heading">My Learning Journal</h3>
-            <p class="copyright">Copyright ©2022</p>
+        <footer className="footer-container">
+            <h3 className="footer-heading">Front End Developer's Guide</h3>
+            <p className="copyright">Copyright ©2023</p>
         </footer>
     )
 }

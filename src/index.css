@@ -8,7 +8,27 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   background: #FFFFFF;
 }
+.view-more-link{
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+.view-more-link,.nav{
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+.search{
+  font-size: 0.78rem;
+}
 
+.view-more-link:hover,.view-more-link:active,.nav:hover{
+  background-color: #141414;
+  color: #FFFFFF;
+  
+}
+.view-more-link:active,.nav:active{
+  font-size: 1.2rem;
+}
 
 /* Header section css start */
 .container{
@@ -30,12 +50,17 @@ body {
 }
 
 .heading{
-  font-size: 0.875rem;
+  font-size: 2rem;
   font-family: 'Roboto', sans-serif;
   color: #0E0E0E;
+  
+}
+.h-link{
+  text-decoration: none;
 }
 ul{
   display: flex;
+  align-items: center;
   
 }
 li{
@@ -50,6 +75,22 @@ li{
   color: #090909;
   text-decoration: none;
 }
+.search-btn{
+  background-color: #ffc300;
+  color: #003566;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ffc300;
+ 
+}
+.search-btn:hover{
+  
+  background-color: #ffc300;
+  color: white;
+  border: 1px dotted #001d3d;
+  cursor: pointer;
+}
+
 /* header css end */
 
 /* header image css start */
@@ -102,7 +143,12 @@ li{
   color: #141414;
   font-size: 1.5rem;
   margin: 0.375em 0;
+  
 }
+.title-link{
+  text-decoration: none;
+}
+
 .main-body{
   margin: 0 0 2.5625em 0;;
   color: #505050;
@@ -143,6 +189,13 @@ li{
 .wider{
   display: none;
 }
+.search-input{
+  padding: 0.5em;
+  border-radius: 8px;
+  width: 200px;
+  font-size: 1rem;
+  border: 1px solid #e5e5e5;
+}
 /* footer css end */
 
 /* media queries */
@@ -173,11 +226,11 @@ li{
   .view-more-container{
       display: block;
   }
-  .try2{
-      
-  }
+
   .heading{
-      font-size: 1rem;
+      font-size: 2rem;
+      letter-spacing: 3px;
+      color: #393939;
   }
   li{
       font-size: 0.9rem;
@@ -246,6 +299,10 @@ li{
 .recent-posts{
   margin-top: 2.80em;
   margin-bottom: 0;
+}
+.nomore{
+  text-align: center;
+  color: grey;
 }
 
 
@@ -357,6 +414,9 @@ li{
 
     
   }
+  .nav,.search{
+    font-size: 1rem;
+  }
   .main{
     width: 100%;
    
@@ -398,3 +458,36 @@ li{
   }
   
 }
+
+
+ 
+ .main-heading:hover{
+  background-position: 0;
+ }
+ .main-heading{
+  background-image: linear-gradient(
+    to right,
+    #32b2e5,
+    #a714cc 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+ }
+ .main-heading:hover::before {
+  width: 100%;
+}
+.main-heading:before {
+
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+}
+
