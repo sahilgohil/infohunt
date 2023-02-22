@@ -7,14 +7,17 @@ import { NewsContextProvider } from "./components/NewsContext";
 import {
   BrowserRouter
 } from "react-router-dom";
+import { ThemeContextProvider } from './components/ThemeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <NewsContextProvider>
-        <BrowserRouter>
-              <App />
-        </BrowserRouter>
-    </NewsContextProvider>
+    <ThemeContextProvider>
+        <NewsContextProvider>
+            <BrowserRouter>
+                  <App />
+            </BrowserRouter>
+        </NewsContextProvider>
+    </ThemeContextProvider>
 
 );
 

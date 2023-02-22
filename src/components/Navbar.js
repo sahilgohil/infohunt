@@ -26,6 +26,10 @@ function Navbar(props)
                    {/* Put icon here */}
                     {/* <Link to='/'><i class="fa-regular fa-newspaper fa-2xl icon"></i></Link> */}
                     <Link to='/' className="h-link"><h1 className="heading">BNN</h1></Link>
+                    <div className="mode">
+                        <img className="lightmode-icon" src="https://cdn-icons-png.flaticon.com/512/2490/2490255.png" alt="lightmode icon"/>
+                        <p>light mode</p>
+                    </div>
                 </section>
                 <ul>
                 <li>

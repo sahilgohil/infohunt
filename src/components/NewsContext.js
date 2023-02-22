@@ -8,7 +8,7 @@ const NewsContext = React.createContext()
 function NewsContextProvider(props)
 {   
     const [newsArray,setNewsArray] = React.useState([])
-    const [topic, setTopic] = React.useState('microsoft')
+    const [topic, setTopic] = React.useState('ai')
     const [pageSize,setPageSize] = React.useState(9)
     function getNewSearchItem(searchedItem)
     {
@@ -23,7 +23,7 @@ function NewsContextProvider(props)
     }
     function viewMoreResults()
     {
-        setPageSize(pre => pre+6)
+        setPageSize(pre => pre + 6)
     }
 
     useEffect(()=>{
