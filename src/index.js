@@ -11,13 +11,13 @@ import { ThemeContextProvider } from './components/ThemeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <ThemeContextProvider>
-        <NewsContextProvider>
-            <BrowserRouter>
-                  <App />
-            </BrowserRouter>
-        </NewsContextProvider>
-    </ThemeContextProvider>
+    <BrowserRouter>
+        <ThemeContextProvider>
+            <NewsContextProvider>
+                    <App />
+            </NewsContextProvider>
+        </ThemeContextProvider>
+    </BrowserRouter>
 
 );
 

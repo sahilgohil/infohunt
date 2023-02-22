@@ -22,7 +22,7 @@ function PostPage()
                             <div className="pp-img-container">
                                 <img className="pp-img" src={post.urlToImage} />
                             </div>
-                            <p className="pp-description">{post.description} <a href={post.url} target='_blank' className='external-link'>Read More Here</a> </p>
+                            <p className="pp-description">{post.content} <a href={post.url} target='_blank' className='external-link'>Read More Here</a> </p>
                             {/* <h1 className="pp-heading">What is a Front-End Developer?</h1> */}
                             {/* <p className="heading-body">{post.description}</p> */}
                         </div>

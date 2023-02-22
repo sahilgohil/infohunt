@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import { useState,useContext } from "react"
 import { NewsContext } from "./NewsContext"
 import {ThemeProvider} from './ThemeContext'
+import { useNavigate } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 
 function Navbar(props)
 {
@@ -11,7 +13,10 @@ function Navbar(props)
                     'https://cdn-icons-png.flaticon.com/512/2490/2490255.png':
                     'https://cdn-icons-png.flaticon.com/512/2490/2490148.png'
     const message = theme === 'light' ? 'light mode': 'dark mode'
-
+    const navigate = useNavigate()
+    const location =  useLocation()
+    
+ 
     function handleChange(event)
     {   
         const {value} = event.target
@@ -19,8 +24,24 @@ function Navbar(props)
     }
     function handleCLick()
     {
-        props.handleHeaderTitle()
-        getNewSearchItem(searchedItem)
+        console.log(location.pathname)
+        navigate('/')
+        if(location.pathname === '/')
+        {
+            props.handleHeaderTitle()
+            getNewSearchItem(searchedItem)
+        }
+        else 
+        {
+            let searched = searchedItem
+            
+            setTimeout(()=>{
+                getNewSearchItem(searched)
+                props.handleHeaderTitle()
+            },3000)
+        }
+
+        
     }
     const {getNewSearchItem} = useContext(NewsContext)
     

@@ -17,15 +17,14 @@ function PostCard()
     
 
     return(
-        <div >
-            
+        <div className='hero-container'>
+            <div className='top-headline'>
+                <h2>Today's Top headlines of Australia</h2>
+            </div>
             <main className="main-container" >
-  
                  {newsElements}
             </main>
-           
-            <div className="view-more-container"><button onClick={viewMoreResults} className="view-more-link">View More</button></div> 
-            
+            <div className="view-more-container"><button onClick={viewMoreResults} className="view-more-link">View More</button></div>
         </div>
     )
 }
