@@ -10,19 +10,24 @@ body {
   color: #1a1a1a;
 }
 .view-more-link{
-  background-color: inherit;
   border: none;
   cursor: pointer;
-}
-.view-more-link,.nav{
-  padding: 6px 10px;
+  background-color: #ffc300;
+  color: #003566;
+  padding: 7px 10px;
   border-radius: 6px;
+}
+.nav{
+  padding: 7px 10px;
+  border-radius: 6px;
+  background-color: #2f2f2f;
+  color: #FFFFFF;
 }
 .search{
   font-size: 0.78rem;
 }
 
-.view-more-link:hover,.view-more-link:active,.nav:hover{
+.nav:hover{
   background-color: #141414;
   color: #FFFFFF;
   
@@ -101,7 +106,7 @@ li{
 .nav{
   font-size: 0.75rem;
   text-decoration: none;
-  color: inherit;
+  
 }
 .search-btn{
   background-color: #ffc300;
@@ -111,7 +116,7 @@ li{
   border: 1px solid #ffc300;
  
 }
-.search-btn:hover,.external-link:hover{
+.view-more-link:hover,.view-more-link:active,.search-btn:hover,.external-link:hover{
   
   background-color: #ffc300;
   color: white;
@@ -146,12 +151,11 @@ li{
 }
 .top-headline{
   border-radius: 1em;
-
-  border: 1px solid black;
+  padding: 0.5em;
   width: 90vw;
   margin: 0 auto;
   text-align: center;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .date{
@@ -222,7 +226,7 @@ li{
 /* footer css start */
 .footer-container{
   min-height: 105px;
-  background-color: #202020;
+  background-color: #242424;
   color: #ECECEC;
   display: flex;
   flex-direction: column;
@@ -538,7 +542,8 @@ li{
   border-radius: 50%;
 }
 .go-top:hover{
-  background-color: #edede9;
+  background-color: #996ee9;
+  color: white;
   cursor: pointer;
 }
 .external-link{
@@ -552,30 +557,48 @@ li{
 }
 
 /* dark mode color */
-/* body{
-  background-color: #1a1a1a;
+.heading-dark{
   color: #e1e1e1;
 }
-.heading{
-  color: #e1e1e1;
-}
-.main-heading{
+.main-heading-dark{
   background-image: linear-gradient(
     to right,
     #32b2e5,
     #a714cc 50%,
-    #e1e1e1 50%
+    #d8d7d7 50%
   );
 }
-.main-body{
+.main-body-dark{
   color: rgb(164 164 164);
 }
-.view-more-link{
+.view-more-link-dark,.nav-dark{
   color: rgb(170 200 228);
   background-color: rgb(47 47 47);
+  padding: 0.8em 1em;
 }
-.header-image-container{background: rgb(36 36 36)
+.header-image-container-dark{
+  background: rgb(36 36 36)
 }
-.date,.image-title,.image-body{
+.dark{
   color: rgb(155, 155, 155)
-} */
+}
+.footer-container-dark{
+  color: rgb(170 200 228);
+}
+.go-top-dark:hover{
+  background-color: #505050;
+}
+.top-headline-dark{
+  color: rgb(164 164 164);
+}
+.view-more-link-dark:hover{
+  background-color: #505050;
+}
+/* 
+
+
+
+
+
+
+ */

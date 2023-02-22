@@ -2,14 +2,25 @@
 import { Routes,Route} from "react-router-dom";
 import Home from "./Home";
 import PostPage from './components/PostPage'
-import { useEffect,useState } from "react";
+import { useEffect,useState,useContext } from "react";
 import { useLocation } from "react-router-dom";
 import React from "react";
+import { ThemeProvider } from "./components/ThemeContext";
 
 
 
 function App() {
 
+  const {theme} = useContext(ThemeProvider)
+  if(theme === 'dark')
+  {
+    document.body.style.backgroundColor = '#1a1a1a'
+    document.body.style.color = '#e1e1e1'
+  }
+  else{
+    document.body.style.backgroundColor = '#ececec'
+    document.body.style.color = '#1a1a1a'
+  }
   const location = useLocation()
   useEffect(()=>{
     goTop()
@@ -43,7 +54,7 @@ function App() {
 
   return (
     <div className="App" >
-      {isWide && <div className="go-top" onClick={goTop}><i class="fa-solid fa-arrow-up fa-xl"></i></div>}
+      {isWide && <div className={theme === 'light' ?'go-top':'go-top go-top-dark'} onClick={goTop}><i class="fa-solid fa-arrow-up fa-xl"></i></div>}
       <Routes>
         <Route path="/" element={<Home isWide = {isWide}/>}/>
         <Route path=':id' element ={<PostPage />}/>
