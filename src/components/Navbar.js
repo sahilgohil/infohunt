@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom"
 import { useState,useContext } from "react"
 import { NewsContext } from "./NewsContext"
+
 function Navbar(props)
 {
     const [searchedItem, setSearchedItem] = useState('')
+
+
 
     function handleChange(event)
     {   
@@ -12,6 +15,7 @@ function Navbar(props)
     }
     function handleCLick()
     {
+        
         getNewSearchItem(searchedItem)
     }
     const {getNewSearchItem} = useContext(NewsContext)
