@@ -39,14 +39,14 @@ function App() {
   {
     window.scrollTo(10,10)
   }
-  console.log(window.innerWidth)
+
 
 
   return (
     <div className="App" >
       {isWide && <div className="go-top" onClick={goTop}><i class="fa-solid fa-arrow-up fa-xl"></i></div>}
       <Routes>
-        <Route path="/" element={<Home />}/>
+        <Route path="/" element={<Home isWide = {isWide}/>}/>
         <Route path=':id' element ={<PostPage />}/>
         <Route path="about" element={<About/>} />
       </Routes>

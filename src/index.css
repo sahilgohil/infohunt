@@ -39,11 +39,7 @@ body {
   align-items: center;
   margin-bottom: 1em;
 }
-.logo-title-container{
-  display: flex;
-  align-items: center;
-  gap : 0.1875em;
-}
+
 .icon{
   
   
@@ -52,9 +48,9 @@ body {
 }
 
 .heading{
-  margin-left: 0.3em;
+  margin-left: 1em;
   padding: 3px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: 'Roboto', sans-serif;
   color: #0E0E0E;
   box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px;
@@ -418,6 +414,9 @@ li{
   font-size: 2.25rem;
 }
 @media (min-width:1100px) {
+  .heading{
+    font-size: 2rem;
+  }
   .post-container{
     padding: 0;
     flex-direction: row;

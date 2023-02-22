@@ -5,16 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { NewsContextProvider } from "./components/NewsContext";
 import {
-  BrowserRouter,Route,Routes
+  BrowserRouter
 } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <NewsContextProvider>
-      <BrowserRouter>
-            <App />
-      </BrowserRouter>
-  </NewsContextProvider>
+    <NewsContextProvider>
+        <BrowserRouter>
+              <App />
+        </BrowserRouter>
+    </NewsContextProvider>
 
 );
 

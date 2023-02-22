@@ -22,9 +22,9 @@ function PostPage()
                             <div className="pp-img-container">
                                 <img className="pp-img" src={post.urlToImage} />
                             </div>
-                            <p className="pp-description">{post.content} <a href={post.url} target='_blank' className='external-link'>Read More Here</a> </p>
-                            <h1 className="pp-heading">What is a Front-End Developer?</h1>
-                            <p className="heading-body">Web development falls into two categories: front-end development and back-end development. Front-end development focuses on the visual aspects of a website. It is the part that users interact with and see. On the other hand, back-end development refers to a website’s structure, logic, data, and system. Both front-end and back-end go hand-in-hand to create an interactive and visually appealing website.</p>
+                            <p className="pp-description">{post.description} <a href={post.url} target='_blank' className='external-link'>Read More Here</a> </p>
+                            {/* <h1 className="pp-heading">What is a Front-End Developer?</h1> */}
+                            {/* <p className="heading-body">{post.description}</p> */}
                         </div>
                     </div>
                     <div className="sidebar">
