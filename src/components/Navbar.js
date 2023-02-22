@@ -33,7 +33,7 @@ function Navbar(props)
                     <li><input onChange={handleChange} placeholder="search topic eg.crypto" type='text' name="search" className="search-input"/></li>
                     <li className="search search-btn" onClick={handleCLick}>Search</li>
                     {props.isWide && <li><Link to='/' title="home page" className="nav"> Home </Link></li>}
-                    {props.isWide && <li><Link to='about' title="about me page" className="nav"> About Me </Link></li>}
+                    {/* {props.isWide && <li><Link to='about' title="about me page" className="nav"> About Me </Link></li>} */}
                 </ul>
             </section>
     )

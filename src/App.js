@@ -2,7 +2,6 @@
 import { Routes,Route} from "react-router-dom";
 import Home from "./Home";
 import PostPage from './components/PostPage'
-import About from "./components/About";
 import { useEffect,useState } from "react";
 import { useLocation } from "react-router-dom";
 import React from "react";
@@ -48,7 +47,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home isWide = {isWide}/>}/>
         <Route path=':id' element ={<PostPage />}/>
-        <Route path="about" element={<About/>} />
       </Routes>
     </div>
   )
