@@ -12,6 +12,7 @@ function NewsContextProvider(props)
     const [topic, setTopic] = React.useState('ai')
     const [pageSize,setPageSize] = React.useState(9)
     const [searching,setSearching] = React.useState(false)
+    const [recentTechNews, setRecentTechNews] = React.useState([])
     const options = {
         method: 'GET',
         headers: {
@@ -46,8 +47,12 @@ function NewsContextProvider(props)
                 .then(response => response.json())
                 .then(data => setNewsArray(data.articles.map(x=> 
                     ({id:uuidv4(),...x}))))
+        fetch('https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&pageSize=6',options)
+                .then(res => res.json())
+                .then(data => setRecentTechNews(data.articles.map(x=> 
+                    ({id:uuidv4(),...x}))))
     },[])
-
+   
     useEffect(()=>{
         if(searching)
         {
@@ -63,7 +68,7 @@ function NewsContextProvider(props)
      console.log(newsArray)
         
     return(
-        <NewsContext.Provider value={{newsArray,getNewSearchItem,viewMoreResults}}>
+        <NewsContext.Provider value={{newsArray,getNewSearchItem,viewMoreResults,recentTechNews}}>
             {props.children}
         </NewsContext.Provider>
     )

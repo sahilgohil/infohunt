@@ -15,7 +15,7 @@ function App() {
   if(theme === 'dark')
   {
     document.body.style.backgroundColor = '#1a1a1a'
-    document.body.style.color = '#e1e1e1'
+    document.body.style.color = 'rgb(155, 155, 155)'
   }
   else{
     document.body.style.backgroundColor = '#ececec'

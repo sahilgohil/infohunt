@@ -358,11 +358,16 @@ li{
 }
 .pp-img-container{
   width: 100%;
+  /* border: 1px solid springgreen; */
+  padding: 1em;
+  margin: 40px 0;
 }
 .pp-img{
   width: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 8px;
+ 
 }
 .dummy{
   height: 100%;

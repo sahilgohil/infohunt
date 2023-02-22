@@ -3,11 +3,17 @@ import { useParams } from "react-router-dom"
 import Footer from "./Footer"
 import { NewsContext } from "./NewsContext"
 import { useContext } from "react"
+import Sidebar from "./Sidebar"
 function PostPage()
 {
-    const{newsArray} = useContext(NewsContext)
+    const{newsArray, recentTechNews} = useContext(NewsContext)
     const {id} = useParams()
-    const post = newsArray.find(data => data.id === id)
+    const post = [...newsArray,...recentTechNews].find(data => data.id === id)
+   
+
+    const sideHtml = recentTechNews.map(item =>{
+        return (<Sidebar data = {item} />)
+    })
    
     
     return (
@@ -23,14 +29,12 @@ function PostPage()
                                 <img className="pp-img" src={post.urlToImage} />
                             </div>
                             <p className="pp-description">{post.content} <a href={post.url} target='_blank' className='external-link'>Read More Here</a> </p>
-                            {/* <h1 className="pp-heading">What is a Front-End Developer?</h1> */}
-                            {/* <p className="heading-body">{post.description}</p> */}
+                            
                         </div>
                     </div>
                     <div className="sidebar">
                         <h2 className="s-title">Recent Posts</h2>
-                        <h3 className="s-p-title">What is Mobile App Marketing and How it Drives Growth for a Brand</h3>
-                        <p className="s-p-date">February 16, 2023</p>
+                        {sideHtml}
                     </div>
                     
                 </div>
