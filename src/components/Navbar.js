@@ -25,8 +25,8 @@ function Navbar(props)
         <section className={`container ${props.className ? props.className : ''}`}>
                 <section className="logo-title-container">
                    {/* Put icon here */}
-                    <Link to='/'><i class="fa-solid fa-lightbulb fa-2xl icon"></i></Link>
-                    <Link to='/' className="h-link"><h1 className="heading">InfoHunt</h1></Link>
+                    <Link to='/'><i class="fa-regular fa-newspaper fa-2xl icon"></i></Link>
+                    <Link to='/' className="h-link"><h1 className="heading">BNN</h1></Link>
                 </section>
                 <ul>
                 <li>

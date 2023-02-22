@@ -6,11 +6,11 @@ import Footer from "./components/Footer";
 function Home()
 {
     return(
-        <div>
+        <>
             <Header />
             <PostCard />
             <Footer />
-        </div>
+        </>
     )
 }
 export default Home
