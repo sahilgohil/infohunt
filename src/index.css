@@ -6,8 +6,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  background: #1a1a1a;
-  color: #e1e1e1;
+  background: #ececec;
+  color: #1a1a1a;
 }
 .view-more-link{
   background-color: inherit;
@@ -536,6 +536,12 @@ li{
   border-radius: 8px;
   display: inline-block;
 }
+
+/* dark mode color */
+/* body{
+  background-color: #1a1a1a;
+  color: #e1e1e1;
+}
 .heading{
   color: #e1e1e1;
 }
@@ -551,10 +557,11 @@ li{
   color: rgb(164 164 164);
 }
 .view-more-link{
-  color: rgb(164 164 164);
+  color: rgb(170 200 228);
+  background-color: rgb(47 47 47);
 }
 .header-image-container{background: rgb(36 36 36)
 }
 .date,.image-title,.image-body{
   color: rgb(155, 155, 155)
-}
+} */
