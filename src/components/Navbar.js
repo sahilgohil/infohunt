@@ -9,10 +9,10 @@ function Navbar(props)
 {
     const [searchedItem, setSearchedItem] = useState('')
     const {theme,toggleTheme} = useContext(ThemeProvider)
-    const iconUrl = theme === 'light' ? 
+    const iconUrl = theme === 'dark' ? 
                     'https://cdn-icons-png.flaticon.com/512/2490/2490255.png':
                     'https://cdn-icons-png.flaticon.com/512/2490/2490148.png'
-    const message = theme === 'light' ? 'light mode': 'dark mode'
+    const message = theme === 'light' ? 'Dark mode': 'Light mode'
     const navigate = useNavigate()
     const location =  useLocation()
     

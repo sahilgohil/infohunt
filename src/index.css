@@ -54,15 +54,11 @@ body {
 .mode{
   display: flex;
   align-items: center;
-  gap: 5px;
+  justify-content: space-around;
   cursor: pointer;
   border-radius: 8px;
-  padding: 0  0.4em;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
 }
-.mode:hover{
-  box-shadow: rgba(174, 45, 45, 0.05) 0px 0px 0px 1px, rgb(39, 107, 208) 0px 0px 0px 1px inset;
-}
+
 
 .logo-title-container{
   display: flex;
@@ -72,14 +68,8 @@ body {
 }
 .lightmode-icon{
   width: 30px;
-  
-
 }
-.lightmode-icon:hover{
-  border-radius: 6px;
-  border: 1px solid rgb(231, 86, 214);
 
-}
 
 .heading{
   margin-left: 1em;
