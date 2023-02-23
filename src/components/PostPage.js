@@ -4,12 +4,15 @@ import Footer from "./Footer"
 import { NewsContext } from "./NewsContext"
 import { useContext } from "react"
 import Sidebar from "./Sidebar"
+import { NasaContext } from "./NasaContext"
 function PostPage()
 {
     const{newsArray, recentTechNews} = useContext(NewsContext)
     const {id} = useParams()
-    const post = [...newsArray,...recentTechNews].find(data => data.id === id)
-   
+    // const post = [...newsArray,...recentTechNews].find(data => data.id === id)
+    
+    const nasaData = useContext(NasaContext)   
+    const post = nasaData.find(item => item.id == id)
 
     const sideHtml = recentTechNews.map(item =>{
         return (<Sidebar data = {item} />)
@@ -24,11 +27,11 @@ function PostPage()
                     <div className="upper-main">
                         <div className="main">
                             <h1 className="pp-title">{post.title}</h1>
-                            <p className="pp-date">{post.publishedAt}</p>
+                            <p className="pp-date">{post.date}</p>
                             <div className="pp-img-container">
-                                <img className="pp-img" src={post.urlToImage} />
+                                <img className="pp-img" src={post.url} />
                             </div>
-                            <p className="pp-description">{post.content} <a href={post.url} target='_blank' className='external-link'>Read More Here</a> </p>
+                            <p className="pp-description">{post.explanation}  </p>
                             
                         </div>
                     </div>

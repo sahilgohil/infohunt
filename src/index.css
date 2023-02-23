@@ -47,9 +47,9 @@ body {
 
 .icon{
   
-  
+  width: 60px;
   margin-left: 1.25em; 
-  margin-right: 0.5em;
+ 
 }
 .mode{
   display: flex;
@@ -63,8 +63,7 @@ body {
 .logo-title-container{
   display: flex;
   align-items: center;
-  width: 300px;
-  justify-content: space-between;
+
 }
 .lightmode-icon{
   width: 30px;

@@ -9,6 +9,17 @@ function Header(props)
      today =  today.toDateString().toUpperCase()
     const {theme} = React.useContext(ThemeProvider)
      const [isSearching,setIsSearching] = React.useState(false)
+     const [landing, setLanding ] = React.useState(true)
+
+     React.useEffect(()=>{
+        if(landing)
+        {
+            setTimeout(()=>{
+                setLanding(false)
+             },3000)
+        }
+        
+     },[])
 
     function handleHeaderTitle()
     {
@@ -23,8 +34,8 @@ function Header(props)
                 <section className={theme === 'light' ? 'header-image-container':'header-image-container header-image-container-dark'}>
                     <div> 
                         <p className={theme === 'light' ? "date" : "date dark" }>{today}</p>
-                        <h1 className={theme === 'light' ? "image-title" : "image-title dark" }>{isSearching ? `Fetching your content . . .🛸 📡`  : `Breaking News Now`}</h1>
-                        <p className={theme === 'light' ? "image-body" : "image-body dark" }>{isSearching ? <i class="fa-solid fa-spinner fa-spin-pulse fa-xl"></i> : `we understand the importance of staying informed in today's fast-paced world. That's why we strive to provide you with the most accurate information.`}</p>
+                        <h1 className={theme === 'light' ? "image-title" : "image-title dark" }>{isSearching ? `Fetching your content . . .🛸 📡`  : landing ? `🛸 loading your content 🛸 . . .`: `NASA's Astronomy Picture of the Day`}</h1>
+                        <p className={theme === 'light' ? "image-body" : "image-body dark" }>{isSearching ? <i class="fa-solid fa-spinner fa-spin-pulse fa-xl"></i> : landing ? <i class="fa-solid fa-spinner fa-spin-pulse fa-xl"></i> : `we understand the importance of staying informed in today's fast-paced world. That's why we strive to provide you with the most accurate information.`}</p>
                     </div>
                 </section>
             </header>

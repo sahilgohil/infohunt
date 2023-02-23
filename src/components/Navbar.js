@@ -51,19 +51,24 @@ function Navbar(props)
                 <section className="logo-title-container">
                    {/* Put icon here */}
                     {/* <Link to='/'><i class="fa-regular fa-newspaper fa-2xl icon"></i></Link> */}
-                    <Link to='/' className="h-link"><h1 className={theme === 'light' ? 'heading': 'heading heading-dark'}>BNN</h1></Link>
-                    <div onClick={toggleTheme} className="mode">
-                        <img className="lightmode-icon" src={iconUrl} alt="lightmode icon"/>
-                        <p>{message}</p>
-                    </div>
+                    <img className="icon" src={theme === 'light' ? 'https://cdn-icons-png.flaticon.com/512/2240/2240730.png' :'https://cdn-icons-png.flaticon.com/512/2240/2240662.png' } alt="icon img space"/>
+                    <Link to='/' className="h-link"><h1 className={theme === 'light' ? 'heading': 'heading heading-dark'}>NAP</h1></Link>
+                    
                 </section>
                 <ul>
-                <li>
+                    <li>
+                        <div onClick={toggleTheme} className="mode">
+                        <img className="lightmode-icon" src={iconUrl} alt="lightmode icon"/>
+                        <p>{message}</p>
+                        </div>
+                    </li>
+                {/* <li>
                     <i class="search fa-solid fa-magnifying-glass"></i></li>
                     <li><input onChange={handleChange} placeholder="search topic eg.crypto" type='text' name="search" className="search-input"/></li>
-                    <li className="search search-btn" onClick={handleCLick}>Search</li>
-                    {props.isWide && <li><Link to='/' title="home page" className={theme === 'light' ? 'nav':'nav nav-dark'}> Home </Link></li>}
+                    <li className="search search-btn" onClick={handleCLick}>Search</li> */}
+                    {/* {props.isWide && <li><Link to='/' title="home page" className={theme === 'light' ? 'nav':'nav nav-dark'}> Home </Link></li>} */}
                     {/* {props.isWide && <li><Link to='about' title="about me page" className="nav"> About Me </Link></li>} */}
+                    <li><Link to='/' title="home page" className={theme === 'light' ? 'nav':'nav nav-dark'}> Home </Link></li>
                 </ul>
             </section>
     )
