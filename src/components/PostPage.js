@@ -11,12 +11,12 @@ function PostPage()
     const {id} = useParams()
     // const post = [...newsArray,...recentTechNews].find(data => data.id === id)
     
-    const nasaData = useContext(NasaContext)   
+    const {nasaData} = useContext(NasaContext)   
     const post = nasaData.find(item => item.id == id)
 
     const sideHtml = nasaData.map(item =>{
         return (<Sidebar data = {item} />)
-    })
+    }).slice(0,10)
    
     
     return (

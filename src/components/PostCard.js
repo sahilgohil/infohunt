@@ -9,19 +9,18 @@ function PostCard()
 {
 
     const {theme} = React.useContext(ThemeProvider)
-    const {newsArray,viewMoreResults} = React.useContext(NewsContext)
-    const nasaData = useContext(NasaContext)
+    const {nasaData,viewMoreResults,loading} = useContext(NasaContext)
+    
+
     
     
-    // const newsElements  = newsArray.map(({urlToImage
-    //     ,title,publishedAt,content,id})=>{
-    //     return (<BlogCard post={{urlToImage
-    //         ,title,publishedAt,content,id}} />)
-    // })
+ 
     
     const nasaElements = nasaData.map(item=>{
         return(<BlogCard post={item}/>)
     })
+
+    
     
 
     return(
@@ -33,7 +32,11 @@ function PostCard()
                  {/* {newsElements} */}
                  {nasaElements}
             </main>
-            <div className="view-more-container"><button onClick={viewMoreResults} className={theme === 'light' ? 'view-more-link':'view-more-link view-more-link-dark'}>View More</button></div>
+            {loading && <div className='loading'> Loading your content <i class="fa-solid fa-spinner fa-spin-pulse fa-lg"></i> </div>}
+            <div className="view-more-container"><button onClick={()=> {
+                                                                    
+                                                                    viewMoreResults()
+                                                                    }} className={theme === 'light' ? 'view-more-link':'view-more-link view-more-link-dark'}>View More</button></div>
         </div>
     )
 }
