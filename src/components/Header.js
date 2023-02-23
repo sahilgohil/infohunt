@@ -16,7 +16,7 @@ function Header(props)
         {
             setTimeout(()=>{
                 setLanding(false)
-             },3000)
+             },5000)
         }
         
      },[])
