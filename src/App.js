@@ -59,6 +59,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home isWide = {isWide}/>}/>
         <Route path=':id' element ={<PostPage />}/>
+    
       </Routes>
     </div>
   )

@@ -14,7 +14,7 @@ function PostPage()
     const nasaData = useContext(NasaContext)   
     const post = nasaData.find(item => item.id == id)
 
-    const sideHtml = recentTechNews.map(item =>{
+    const sideHtml = nasaData.map(item =>{
         return (<Sidebar data = {item} />)
     })
    

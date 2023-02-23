@@ -146,7 +146,22 @@ li{
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
-
+.recent-img{
+  width: 70px;
+  height: 70px;
+}
+.recent-container{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.recent-link{
+  text-decoration: none;
+  color: inherit;
+}
+.recent-link:hover{
+  text-decoration: underline #001d3d;
+}
 .date{
   font-size: 0.75rem;
   margin-bottom: 0.66em;
@@ -357,12 +372,10 @@ li{
 }
 .pp-img-container{
   width: 100%;
-  /* border: 1px solid springgreen; */
   padding: 1em;
   margin: 40px 0;
 }
 .pp-img{
-  width: 100%;
   object-fit: cover;
   display: block;
   border-radius: 8px;
