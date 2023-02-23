@@ -1,15 +1,12 @@
 import Navbar from "./Navbar"
 import { useParams } from "react-router-dom"
 import Footer from "./Footer"
-import { NewsContext } from "./NewsContext"
 import { useContext } from "react"
 import Sidebar from "./Sidebar"
 import { NasaContext } from "./NasaContext"
 function PostPage()
 {
-    const{newsArray, recentTechNews} = useContext(NewsContext)
     const {id} = useParams()
-    // const post = [...newsArray,...recentTechNews].find(data => data.id === id)
     
     const {nasaData} = useContext(NasaContext)   
     const post = nasaData.find(item => item.id == id)

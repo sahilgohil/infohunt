@@ -1,7 +1,6 @@
 
 import BlogCard from './BlogCard'
 import React, { useContext } from "react"
-import { NewsContext } from './NewsContext'
 import { ThemeProvider } from './ThemeContext'
 import { NasaContext } from './NasaContext'
 

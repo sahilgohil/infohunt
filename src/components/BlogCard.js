@@ -4,7 +4,6 @@ import { useContext } from "react"
 
 function BlogCard(props)
 {   
-    // const date = props.post.publishedAt.slice(0,10)
     const {theme} = useContext(ThemeProvider)
     const desc = props.post.explanation.slice(0,100)+'...'
     return(

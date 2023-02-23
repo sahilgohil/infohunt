@@ -26,8 +26,7 @@ function App() {
   useEffect(()=>{
     goTop()
   },[location])
-  //newsapi.org
-// api key= 7b5391f0b30c443786924b2a5038dff6
+
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isWide,setIsWide] = useState(false)

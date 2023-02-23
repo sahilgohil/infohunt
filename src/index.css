@@ -376,6 +376,7 @@ li{
   margin: 40px 0;
 }
 .pp-img{
+  width: 100%;
   object-fit: cover;
   display: block;
   border-radius: 8px;
@@ -461,6 +462,9 @@ li{
   font-size: 2.25rem;
 }
 @media (min-width:1100px) {
+  .pp-img{
+    width: 100%;
+  }
   .heading{
     font-size: 2rem;
   }
